@@ -200,8 +200,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-shadow: 0 0 9px var(--sand);
   border-radius: var(--r-md);
   /* fixed aspect ratio prevents layout jump when images load */
-  aspect-ratio: 1;
-  background: var(--blush);
+ 
   will-change: transform;
 }
 .gallery-item img {
