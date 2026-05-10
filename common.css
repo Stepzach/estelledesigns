@@ -460,7 +460,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .sec { padding: 48px 16px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .item-detail-sec { padding: 12px 16px 80px; }
-  .item-image-wrap { max-height: 80vw; }
+      .item-image-wrap {
+        max-height: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        background: #faf0e800;
+    }
   .footer-top { grid-template-columns: 1fr; }
   .footer-col { border-right: none !important; padding: 24px 20px; }
   .footer-col:nth-child(n+2) { border-top: 1px solid var(--sand); }
