@@ -152,9 +152,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .sec-title em { font-style: italic; color: var(--ink-mid); }
 .sec-body {
-  font-family: var(--ff-serif);
-  font-size: 1.1rem; line-height: 1.75;
-  color: var(--ink-mid); max-width: 560px;
+    font-family: var(--ff-serif);
+    font-size: 1rem;
+    line-height: 1.35;
+    color: var(--ink-mid);
+    max-width: 560px;
 }
 
 /* ── GALLERY ── */
@@ -464,5 +466,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .footer-col:nth-child(n+2) { border-top: 1px solid var(--sand); }
   .footer-bottom { padding: 14px 20px; }
   /* Show overlay links on mobile tap */
-  .gallery-overlay { opacity: 1 !important; background: linear-gradient(to top, rgba(30,22,16,.55) 0%, transparent 55%); }
+  .gallery-overlay { opacity: 0 !important; background: linear-gradient(to top, rgba(30,22,16,.55) 0%, transparent 55%); }
+
+.gallery-tab {
+      min-height: 34px;
+      padding: 0px 10px;
+    border-radius: var(--r-pill);
+    font-size: .64rem;
+}
 }
