@@ -480,3 +480,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-size: .64rem;
 }
 }
+.best-seller-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px;   /* adjust to taste */
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
