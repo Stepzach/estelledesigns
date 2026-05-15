@@ -315,5 +315,270 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
   } catch (err) { console.warn('Carousel fetch failed:', err); }
 })();
 </script>
+   <!--
+╔══════════════════════════════════════════════════════════════════════╗
+║  VIP CLUB POPUP — paste this block just before </body> in index.html  ║
+╠══════════════════════════════════════════════════════════════════════╣
+║  MAILCHIMP SETUP (one-time):                                         ║
+║  1. Log into Mailchimp → Audience → Signup Forms → Embedded forms    ║
+║  2. Copy the form's action URL — looks like:                         ║
+║     https://XXXX.us1.list-manage.com/subscribe/post?u=XXX&id=XXX    ║
+║  3. Replace BOTH instances of YOUR_MAILCHIMP_ACTION_URL below        ║
+╚══════════════════════════════════════════════════════════════════════╝
+-->
+
+<!-- Hidden iframe — catches Mailchimp's redirect so the page doesn't navigate away -->
+<iframe name="mc_embed_target" style="display:none;" aria-hidden="true"></iframe>
+
+<!-- ── VIP POPUP STYLES ── -->
+<style>
+#vip-backdrop {
+  position: fixed; inset: 0; z-index: 800;
+  background: rgba(30, 22, 16, 0.45);
+  opacity: 0; visibility: hidden;
+  transition: opacity .4s var(--ease-out), visibility .4s;
+}
+#vip-backdrop.show { opacity: 1; visibility: visible; }
+
+#vip-popup {
+  position: fixed;
+  bottom: 32px; right: 32px;
+  z-index: 801;
+  width: min(380px, calc(100vw - 32px));
+  background: var(--cream);
+  border: 1px solid var(--sand);
+  border-radius: 18px;
+  padding: 36px 32px 32px;
+  box-shadow: 0 24px 64px rgba(42, 31, 26, .18);
+
+  transform: translateY(24px) scale(.97);
+  opacity: 0; visibility: hidden;
+  transition: transform .45s var(--ease-spring), opacity .4s var(--ease-out), visibility .4s;
+}
+#vip-popup.show {
+  transform: translateY(0) scale(1);
+  opacity: 1; visibility: visible;
+}
+
+#vip-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none; cursor: pointer;
+  color: var(--stone); font-size: 1.2rem; line-height: 1;
+  padding: 6px; border-radius: 50%;
+  transition: color .2s, background .2s;
+  min-width: 36px; min-height: 36px;
+  display: flex; align-items: center; justify-content: center;
+}
+#vip-close:hover { color: var(--ink); background: var(--blush); }
+
+#vip-popup .vip-star-row {
+  font-size: .62rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+  flex-wrap: wrap;
+}
+#vip-popup .vip-star-row span { opacity: .55; }
+
+#vip-popup .vip-headline {
+  font-family: var(--ff-display);
+  font-size: 2rem; line-height: .98;
+  color: var(--ink); margin-bottom: 6px;
+  font-style: italic;
+}
+#vip-popup .vip-headline strong {
+  font-style: normal; color: var(--gold);
+  font-weight: 900;
+}
+
+#vip-popup .vip-perks {
+  font-size: .67rem; font-weight: 600; letter-spacing: .11em; text-transform: uppercase;
+  color: var(--stone); line-height: 1.9; margin-bottom: 22px;
+}
+#vip-popup .vip-perks .perk-bullet { color: var(--gold); margin-right: 4px; }
+
+#vip-form { display: flex; flex-direction: column; gap: 10px; }
+#vip-email {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid var(--sand);
+  border-radius: var(--r-pill);
+  background: var(--warm);
+  font-family: var(--ff-sans);
+  font-size: .82rem; color: var(--ink);
+  outline: none;
+  transition: border-color .2s;
+}
+#vip-email::placeholder { color: var(--stone); }
+#vip-email:focus { border-color: var(--stone); }
+
+#vip-submit {
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: var(--r-pill);
+  background: var(--ink);
+  color: var(--cream);
+  font-family: var(--ff-sans);
+  font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+  border: none; cursor: pointer;
+  transition: background .25s, transform .2s var(--ease-spring);
+  min-height: 48px;
+}
+#vip-submit:hover { background: var(--ink-mid); transform: translateY(-2px); }
+#vip-submit:active { transform: scale(.98); }
+
+#vip-success {
+  display: none;
+  text-align: center;
+  padding: 12px 0 4px;
+}
+#vip-success .vip-success-icon {
+  font-size: 2rem; margin-bottom: 10px;
+}
+#vip-success p {
+  font-family: var(--ff-serif);
+  font-size: .9rem; line-height: 1.65;
+  color: var(--ink-mid);
+}
+#vip-success strong { color: var(--ink); }
+
+#vip-popup .vip-privacy {
+  font-size: .59rem; color: var(--stone); letter-spacing: .04em;
+  text-align: center; margin-top: 6px;
+}
+
+/* Mobile: popup fills bottom of screen */
+@media (max-width: 480px) {
+  #vip-popup {
+    bottom: 0; right: 0; left: 0;
+    width: 100%;
+    border-radius: 18px 18px 0 0;
+    padding: 30px 22px 28px;
+  }
+}
+</style>
+
+<!-- ── VIP POPUP HTML ── -->
+<div id="vip-backdrop" aria-hidden="true"></div>
+
+<div id="vip-popup" role="dialog" aria-modal="true" aria-labelledby="vip-heading" aria-describedby="vip-perks-desc">
+  <button id="vip-close" aria-label="Close popup">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <p class="vip-star-row">
+    <span>✦</span> Members only <span>✦</span>
+  </p>
+
+  <h2 class="vip-headline" id="vip-heading">
+    Join the<br><strong>VIP Club</strong>
+  </h2>
+
+  <div class="vip-perks" id="vip-perks-desc">
+    <div><span class="perk-bullet">★</span>Exclusive coupon codes</div>
+    <div><span class="perk-bullet">★</span>Shop announcements</div>
+    <div><span class="perk-bullet">★</span>Monthly digital freebies</div>
+  </div>
+
+  <!-- Mailchimp form — targets hidden iframe to prevent page navigation -->
+  <form
+    id="vip-form"
+    action="YOUR_MAILCHIMP_ACTION_URL"
+    method="post"
+    target="mc_embed_target"
+    novalidate
+  >
+    <!-- Mailchimp honeypot — do not remove -->
+    <div style="position:absolute;left:-5000px;" aria-hidden="true">
+      <input type="text" name="b_XXXXX_XXXXX" tabindex="-1" value="">
+    </div>
+
+    <input
+      type="email"
+      id="vip-email"
+      name="EMAIL"
+      placeholder="Your email address"
+      required
+      autocomplete="email"
+    >
+    <button type="submit" id="vip-submit">
+      Get my perks &rarr;
+    </button>
+    <p class="vip-privacy">No spam, ever. Unsubscribe anytime.</p>
+  </form>
+
+  <div id="vip-success" role="status">
+    <div class="vip-success-icon">🌸</div>
+    <p><strong>You're in!</strong><br>Welcome to the VIP Club. Check your inbox for a little something special.</p>
+  </div>
+</div>
+
+<!-- ── VIP POPUP SCRIPT ── -->
+<script>
+(function () {
+  const STORAGE_KEY = 'es_vip_dismissed';
+  const RESHOW_DAYS = 30; // don't show again for 30 days after dismiss
+
+  const backdrop = document.getElementById('vip-backdrop');
+  const popup    = document.getElementById('vip-popup');
+  const closeBtn = document.getElementById('vip-close');
+  const form     = document.getElementById('vip-form');
+  const success  = document.getElementById('vip-success');
+
+  function isDismissed() {
+    try {
+      const ts = localStorage.getItem(STORAGE_KEY);
+      if (!ts) return false;
+      const diff = Date.now() - parseInt(ts, 10);
+      return diff < RESHOW_DAYS * 24 * 60 * 60 * 1000;
+    } catch (_) { return false; }
+  }
+
+  function dismiss() {
+    try { localStorage.setItem(STORAGE_KEY, Date.now()); } catch (_) {}
+    backdrop.classList.remove('show');
+    popup.classList.remove('show');
+  }
+
+  function openPopup() {
+    backdrop.classList.add('show');
+    popup.classList.add('show');
+    document.getElementById('vip-email').focus();
+  }
+
+  // Don't show if already dismissed recently
+  if (isDismissed()) return;
+
+  // Show after 2.5 s delay
+  setTimeout(openPopup, 2500);
+
+  closeBtn.addEventListener('click', dismiss);
+  backdrop.addEventListener('click', dismiss);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && popup.classList.contains('show')) dismiss();
+  });
+
+  // Handle form submit
+  form.addEventListener('submit', function (e) {
+    const email = document.getElementById('vip-email').value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      e.preventDefault();
+      document.getElementById('vip-email').focus();
+      return;
+    }
+
+    // Let the form POST to Mailchimp via the hidden iframe,
+    // then show success state after a short delay
+    setTimeout(() => {
+      form.style.display = 'none';
+      success.style.display = 'block';
+      // Auto-close after 4 s and mark as dismissed
+      setTimeout(() => {
+        dismiss();
+        try { localStorage.setItem(STORAGE_KEY + '_subscribed', '1'); } catch (_) {}
+      }, 4000);
+    }, 800);
+  });
+})();
+</script>
 </body>
 </html>
