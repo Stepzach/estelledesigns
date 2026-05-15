@@ -489,7 +489,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     z-index: 2;
     pointer-events: none;
    
-    background: #ffffff4d;
+   
     border-radius: 50%;
 }
 @media (min-width: 959px) {
