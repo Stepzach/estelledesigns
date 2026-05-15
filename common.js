@@ -232,11 +232,13 @@ function renderItemPage(sectionKey, row, slug) {
     : '';
 
   const itemPageUrl = window.location.origin + window.location.pathname + '?item=' + sectionKey + '/' + slug;
-  const pinSaveUrl  = 'https://www.pinterest.com/pin/create/button/'
-    + '?url='         + encodeURIComponent(itemPageUrl)
-    + '&media='       + encodeURIComponent(imgUrl)
-    + '&description=' + encodeURIComponent(title + (pinDesc ? ' - ' + pinDesc : ''))
-    + '&title='       + encodeURIComponent(title);
+ // Remove the useless '&title=' and cleanly format the description
+const formattedDesc = pinDesc ? `${title} | ${pinDesc}` : title;
+
+const pinSaveUrl  = 'https://www.pinterest.com/pin/create/button/'
+  + '?url='         + encodeURIComponent(itemPageUrl)
+  + '&media='       + encodeURIComponent(imgUrl)
+  + '&description=' + encodeURIComponent(formattedDesc);
 
   itemContent.innerHTML = `
     <div class="item-layout">
