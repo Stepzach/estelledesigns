@@ -315,20 +315,21 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
   } catch (err) { console.warn('Carousel fetch failed:', err); }
 })();
 </script>
-   <!--
+<!--
 ╔══════════════════════════════════════════════════════════════════════╗
 ║  VIP CLUB POPUP — paste this block just before </body> in index.html  ║
 ╠══════════════════════════════════════════════════════════════════════╣
-║  MAILCHIMP SETUP (one-time):                                         ║
-║  1. Log into Mailchimp → Audience → Signup Forms → Embedded forms    ║
-║  2. Copy the form's action URL — looks like:                         ║
-║     https://XXXX.us1.list-manage.com/subscribe/post?u=XXX&id=XXX    ║
-║  3. Replace BOTH instances of YOUR_MAILCHIMP_ACTION_URL below        ║
+║  MAILERLITE SETUP (one-time, ~2 mins):                               ║
+║  1. MailerLite dashboard → Forms → select/create an Embedded form    ║
+║  2. Click "Embed" → look inside the code for the <form action="..."> ║
+║     It looks like:                                                    ║
+║     https://assets.mailerlite.com/jsonp/ACCOUNT_ID/forms/FORM_ID/subscribe ║
+║  3. Replace YOUR_ACCOUNT_ID and YOUR_FORM_ID in the action below     ║
 ╚══════════════════════════════════════════════════════════════════════╝
 -->
 
-<!-- Hidden iframe — catches Mailchimp's redirect so the page doesn't navigate away -->
-<iframe name="mc_embed_target" style="display:none;" aria-hidden="true"></iframe>
+<!-- Hidden iframe — catches MailerLite's redirect so the page doesn't navigate away -->
+<iframe name="ml_embed_target" style="display:none;" aria-hidden="true"></iframe>
 
 <!-- ── VIP POPUP STYLES ── -->
 <style>
@@ -431,9 +432,7 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
   text-align: center;
   padding: 12px 0 4px;
 }
-#vip-success .vip-success-icon {
-  font-size: 2rem; margin-bottom: 10px;
-}
+#vip-success .vip-success-icon { font-size: 2rem; margin-bottom: 10px; }
 #vip-success p {
   font-family: var(--ff-serif);
   font-size: .9rem; line-height: 1.65;
@@ -446,7 +445,6 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
   text-align: center; margin-top: 6px;
 }
 
-/* Mobile: popup fills bottom of screen */
 @media (max-width: 480px) {
   #vip-popup {
     bottom: 0; right: 0; left: 0;
@@ -479,27 +477,27 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
     <div><span class="perk-bullet">★</span>Monthly digital freebies</div>
   </div>
 
-  <!-- Mailchimp form — targets hidden iframe to prevent page navigation -->
+  <!--
+    MailerLite embedded form.
+    Replace YOUR_ACCOUNT_ID and YOUR_FORM_ID with values from your MailerLite embed code.
+    The field name must be fields[email] — this is what MailerLite expects.
+  -->
   <form
     id="vip-form"
-    action="YOUR_MAILCHIMP_ACTION_URL"
+    action="https://assets.mailerlite.com/jsonp/223213/forms/jdUH4k/subscribe"
     method="post"
-    target="mc_embed_target"
+    target="ml_embed_target"
     novalidate
   >
-    <!-- Mailchimp honeypot — do not remove -->
-    <div style="position:absolute;left:-5000px;" aria-hidden="true">
-      <input type="text" name="b_XXXXX_XXXXX" tabindex="-1" value="">
-    </div>
-
     <input
       type="email"
       id="vip-email"
-      name="EMAIL"
+      name="fields[email]"
       placeholder="Your email address"
       required
       autocomplete="email"
     >
+
     <button type="submit" id="vip-submit">
       Submit &rarr;
     </button>
@@ -516,7 +514,7 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
 <script>
 (function () {
   const STORAGE_KEY = 'es_vip_dismissed';
-  const RESHOW_DAYS = 30; // don't show again for 30 days after dismiss
+  const RESHOW_DAYS = 30;
 
   const backdrop = document.getElementById('vip-backdrop');
   const popup    = document.getElementById('vip-popup');
@@ -528,8 +526,7 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
     try {
       const ts = localStorage.getItem(STORAGE_KEY);
       if (!ts) return false;
-      const diff = Date.now() - parseInt(ts, 10);
-      return diff < RESHOW_DAYS * 24 * 60 * 60 * 1000;
+      return Date.now() - parseInt(ts, 10) < RESHOW_DAYS * 86400000;
     } catch (_) { return false; }
   }
 
@@ -545,10 +542,8 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
     document.getElementById('vip-email').focus();
   }
 
-  // Don't show if already dismissed recently
   if (isDismissed()) return;
 
-  // Show after 2.5 s delay
   setTimeout(openPopup, 2500);
 
   closeBtn.addEventListener('click', dismiss);
@@ -557,7 +552,6 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
     if (e.key === 'Escape' && popup.classList.contains('show')) dismiss();
   });
 
-  // Handle form submit
   form.addEventListener('submit', function (e) {
     const email = document.getElementById('vip-email').value.trim();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -565,16 +559,14 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
       document.getElementById('vip-email').focus();
       return;
     }
-
-    // Let the form POST to Mailchimp via the hidden iframe,
-    // then show success state after a short delay
+    // Form posts to MailerLite via the hidden iframe.
+    // Show the success state after a short delay.
     setTimeout(() => {
       form.style.display = 'none';
       success.style.display = 'block';
-      // Auto-close after 4 s and mark as dismissed
       setTimeout(() => {
-        dismiss();
         try { localStorage.setItem(STORAGE_KEY + '_subscribed', '1'); } catch (_) {}
+        dismiss();
       }, 4000);
     }, 800);
   });
