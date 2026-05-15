@@ -75,7 +75,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 0 48px;
 }
 .brand { display: flex; align-items: center; }
-.brand img { height: 52px; width: auto; display: block; }
+.brand img { height: 62px; width: auto; display: block; }
 
 .nav-list { display: flex; gap: 0; }
 .nav-item a {
