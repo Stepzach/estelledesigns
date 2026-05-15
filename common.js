@@ -362,6 +362,7 @@ function switchTab(sectionKey, cs, tabsId, gridId) {
 }
 
 /* Build gallery grid */
+/* Build gallery grid */
 function buildGallery(sectionKey, rows, gridId) {
   const grid = document.getElementById(gridId);
   if (!grid) return;
@@ -372,48 +373,82 @@ function buildGallery(sectionKey, rows, gridId) {
     return;
   }
 
-  rows.forEach((row, i) => {
-    const slug        = row._slug;
-    const imgUrl      = getImage(row);
-    const alt         = get(row, 'alt')     || 'Artwork';
-    const etsyUrl     = get(row, 'etsy')    || '#';
-    const title       = get(row, 'title')   || 'Item';
-    const pinDesc     = get(row, 'pinDesc') || '';
-    const isBestSeller = (row['BEST_SELLER'] || '').trim().toLowerCase() === 'yes';
-    const itemPageUrl = window.location.origin + window.location.pathname + '?item=' + sectionKey + '/' + slug;
-
-    const delayClass = i % 4 !== 0 ? ` reveal-d${Math.min(i % 4, 4)}` : '';
-    const item = document.createElement('article');
-    item.className = 'gallery-item reveal' + delayClass;
-    item.setAttribute('role', 'listitem');
-
-    item.innerHTML = `
-      <img src="${imgUrl}" alt="${alt}"
-           data-pin-url="${itemPageUrl}"
-           data-pin-media="${imgUrl}"
-           data-pin-description="${pinDesc}"
-           data-pin-title="${title}" loading="lazy">
-      ${isBestSeller ? `<img src="https://ik.imagekit.io/ngoo36zmk/IMG_7886.gif" alt="Best Seller" class="best-seller-badge" aria-label="Best Seller">` : ''}
-      <div class="gallery-overlay" aria-hidden="true">
-        <div class="gallery-overlay-links">
-          ${etsyUrl !== '#' ? `<a href="${etsyUrl}" class="ov-link etsy" target="_blank" rel="noopener" tabindex="-1">
-            <i class="fa-brands fa-etsy"></i> Etsy
-          </a>` : ''}
-          <span class="ov-link pin" tabindex="-1">
-            <i class="fa-brands fa-pinterest"></i> Pin
-          </span>
-        </div>
-      </div>
-    `;
-
-    item.addEventListener('click', e => {
-      if (e.target.closest('.ov-link.etsy')) return;
-      e.preventDefault();
-      openItem(sectionKey, slug);
-    });
-
-    grid.appendChild(item);
+  // 1. Separate normal rows from "SHORT" rows
+  const normalRows = [];
+  const shortRows = [];
+  
+  rows.forEach(row => {
+    const isShort = (row['SHORT'] || '').trim().toLowerCase() === 'yes';
+    if (isShort) {
+      shortRows.push(row);
+    } else {
+      normalRows.push(row);
+    }
   });
+
+  // Helper function to render a batch of items
+  let globalIndex = 0; 
+  const renderItems = (items) => {
+    items.forEach((row) => {
+      const slug         = row._slug;
+      const imgUrl       = getImage(row);
+      const alt          = get(row, 'alt')      || 'Artwork';
+      const etsyUrl      = get(row, 'etsy')     || '#';
+      const title        = get(row, 'title')    || 'Item';
+      const pinDesc      = get(row, 'pinDesc')  || '';
+      const isBestSeller = (row['BEST_SELLER'] || '').trim().toLowerCase() === 'yes';
+      const itemPageUrl  = window.location.origin + window.location.pathname + '?item=' + sectionKey + '/' + slug;
+
+      // Keep reveal timing consistent across both groups
+      const delayClass = globalIndex % 4 !== 0 ? ` reveal-d${Math.min(globalIndex % 4, 4)}` : '';
+      const item = document.createElement('article');
+      item.className = 'gallery-item reveal' + delayClass;
+      item.setAttribute('role', 'listitem');
+
+      item.innerHTML = `
+        <img src="${imgUrl}" alt="${alt}"
+             data-pin-url="${itemPageUrl}"
+             data-pin-media="${imgUrl}"
+             data-pin-description="${pinDesc}"
+             data-pin-title="${title}" loading="lazy">
+        ${isBestSeller ? `<img src="https://ik.imagekit.io/ngoo36zmk/IMG_7886.gif" alt="Best Seller" class="best-seller-badge" aria-label="Best Seller">` : ''}
+        <div class="gallery-overlay" aria-hidden="true">
+          <div class="gallery-overlay-links">
+            ${etsyUrl !== '#' ? `<a href="${etsyUrl}" class="ov-link etsy" target="_blank" rel="noopener" tabindex="-1">
+              <i class="fa-brands fa-etsy"></i> Etsy
+            </a>` : ''}
+            <span class="ov-link pin" tabindex="-1">
+              <i class="fa-brands fa-pinterest"></i> Pin
+            </span>
+          </div>
+        </div>
+      `;
+
+      item.addEventListener('click', e => {
+        if (e.target.closest('.ov-link.etsy')) return;
+        e.preventDefault();
+        openItem(sectionKey, slug);
+      });
+
+      grid.appendChild(item);
+      globalIndex++;
+    });
+  };
+
+  // 2. Render normal items first
+  renderItems(normalRows);
+
+  // 3. Force a new line in the CSS Grid before rendering short items
+  if (normalRows.length > 0 && shortRows.length > 0) {
+    const breakEl = document.createElement('div');
+    // grid-column: 1 / -1 forces the element to span the entire width of the grid
+    breakEl.style.gridColumn = '1 / -1'; 
+    breakEl.className = 'gallery-short-divider'; // Optional: target in CSS if you want spacing
+    grid.appendChild(breakEl);
+  }
+
+  // 4. Render the "SHORT" items grouped together
+  renderItems(shortRows);
 
   observeReveals(grid);
   fadeImages(grid);
