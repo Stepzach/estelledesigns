@@ -217,13 +217,14 @@ document.addEventListener('keydown', e => {
 });
 
 /* ═══ ITEM DETAIL RENDERER ═══ */
+/* ═══ ITEM DETAIL RENDERER ═══ */
 function renderItemPage(sectionKey, row, slug) {
   if (!itemContent) return;
   const imgUrl     = getImage(row);
-  const alt        = get(row, 'alt')     || 'Artwork';
-  const title      = get(row, 'title')   || 'Item';
+  const alt        = get(row, 'alt')      || 'Artwork';
+  const title      = get(row, 'title')    || 'Item';
   const pinDesc    = get(row, 'pinDesc') || '';
-  const etsyUrl    = get(row, 'etsy')    || '#';
+  const etsyUrl    = get(row, 'etsy')     || '#';
   const tagsRaw    = get(row, 'tags');
   const catLabel   = row._catLabel || '';
 
@@ -232,13 +233,15 @@ function renderItemPage(sectionKey, row, slug) {
     : '';
 
   const itemPageUrl = window.location.origin + window.location.pathname + '?item=' + sectionKey + '/' + slug;
- // Remove the useless '&title=' and cleanly format the description
-const formattedDesc = pinDesc ? `${title} | ${pinDesc}` : title;
+  
+  // Remove the useless '&title=' and cleanly format the description
+  const formattedDesc = pinDesc ? `${title} | ${pinDesc}` : title;
 
-const pinSaveUrl  = 'https://www.pinterest.com/pin/create/button/'
-  + '?url='         + encodeURIComponent(itemPageUrl)
-  + '&media='       + encodeURIComponent(imgUrl)
-  + '&description=' + encodeURIComponent(formattedDesc);
+  // FIX: Force encode single quotes to '%27' so they don't break the inline onclick JavaScript
+  const pinSaveUrl  = 'https://www.pinterest.com/pin/create/button/'
+    + '?url='         + encodeURIComponent(itemPageUrl).replace(/'/g, '%27')
+    + '&media='       + encodeURIComponent(imgUrl).replace(/'/g, '%27')
+    + '&description=' + encodeURIComponent(formattedDesc).replace(/'/g, '%27');
 
   itemContent.innerHTML = `
     <div class="item-layout">
@@ -269,7 +272,6 @@ const pinSaveUrl  = 'https://www.pinterest.com/pin/create/button/'
   `;
   if (window.PinUtils) window.PinUtils.build();
 }
-
 /* ═══ DATA LOADER ═══ */
 const skeletonsHtml = Array(8).fill('<div class="skel-item" aria-hidden="true"></div>').join('');
 
