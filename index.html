@@ -477,10 +477,18 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
     <div><span class="perk-bullet">★</span>Monthly digital freebies</div>
   </div>
 
- 
- 
-<form id="vip-form" novalidate>
-   
+  <!--
+    MailerLite embedded form.
+    Replace YOUR_ACCOUNT_ID and YOUR_FORM_ID with values from your MailerLite embed code.
+    The field name must be fields[email] — this is what MailerLite expects.
+  -->
+  <form
+    id="vip-form"
+    action="https://assets.mailerlite.com/jsonp/223213/forms/71836622065239317/subscribe"
+    method="post"
+    target="ml_embed_target"
+    novalidate
+  >
     <input
       type="email"
       id="vip-email"
@@ -544,35 +552,25 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
     if (e.key === 'Escape' && popup.classList.contains('show')) dismiss();
   });
 
- form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const emailInput = document.getElementById('vip-email');
-  const email = emailInput.value.trim();
-
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    emailInput.focus();
-    return;
-  }
-
-  // This tells the MailerLite script you added to "force" a subscription
-  // using your specific Form ID (jdUH4k)
-  if (typeof ml !== 'undefined') {
-    ml('send', 'form', 'jdUH4k', {
-      email: email
-    }, function() {
-      // This runs AFTER MailerLite confirms receipt
+  form.addEventListener('submit', function (e) {
+    const email = document.getElementById('vip-email').value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      e.preventDefault();
+      document.getElementById('vip-email').focus();
+      return;
+    }
+    // Form posts to MailerLite via the hidden iframe.
+    // Show the success state after a short delay.
+    setTimeout(() => {
       form.style.display = 'none';
       success.style.display = 'block';
-      
-      try { localStorage.setItem(STORAGE_KEY + '_subscribed', '1'); } catch (_) {}
-      setTimeout(dismiss, 4000);
-    });
-  } else {
-    // Fallback if the script hasn't loaded
-    console.error("MailerLite script not loaded");
-  }
-});
-   })();
+      setTimeout(() => {
+        try { localStorage.setItem(STORAGE_KEY + '_subscribed', '1'); } catch (_) {}
+        dismiss();
+      }, 4000);
+    }, 800);
+  });
+})();
 </script>
 </body>
 </html>
