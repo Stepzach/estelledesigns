@@ -197,7 +197,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   min-height: 0;
 }
 .gallery-item {
-  position: relative; overflow: hidden;
+  position: relative; overflow: visible;
   cursor: pointer;
   box-shadow: 0 0 9px var(--sand);
   border-radius: var(--r-md);
@@ -481,13 +481,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 }
 .best-seller-badge {
-position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 80px !important;
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    width: 65px !important;
     height: auto !important;
     z-index: 2;
     pointer-events: none;
-    box-shadow: 0 0 9px var(--sand);
+   
+    background: #ffffff4d;
     border-radius: 50%;
 }
+@media (min-width: 959px) {
+  .best-seller-badge {
+   
+    width: 75px !important;
+  
+}
+ } 
