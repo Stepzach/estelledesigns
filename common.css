@@ -508,3 +508,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   
 }
  } 
+@media (max-width: 960px) {
+.item-back {
+  
+    margin-bottom: 0px;
+   
+    min-height: 34px;
+}
+  
+
+ }
