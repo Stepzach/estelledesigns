@@ -544,6 +544,7 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
 
   if (isDismissed()) return;
 
+  // Show popup after 2.5 seconds
   setTimeout(openPopup, 2500);
 
   closeBtn.addEventListener('click', dismiss);
@@ -559,15 +560,15 @@ window._pageDefaultTitle = 'Estelle Stephens — Illustrator & Designer';
       document.getElementById('vip-email').focus();
       return;
     }
-    // Form posts to MailerLite via the hidden iframe.
-    // Show the success state after a short delay.
+
+    // Show success message (code is revealed)
     setTimeout(() => {
       form.style.display = 'none';
       success.style.display = 'block';
-      setTimeout(() => {
-        try { localStorage.setItem(STORAGE_KEY + '_subscribed', '1'); } catch (_) {}
-        dismiss();
-      }, 4000);
+      
+      // I removed the auto-dismiss timer here. 
+      // The popup will now stay open until the user manually closes it.
+      try { localStorage.setItem(STORAGE_KEY + '_subscribed', '1'); } catch (_) {}
     }, 800);
   });
 })();
