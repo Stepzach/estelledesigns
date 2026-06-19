@@ -273,6 +273,7 @@ function renderItemPage(sectionKey, row, slug) {
   if (window.PinUtils) window.PinUtils.build();
 }
 /* ═══ DATA LOADER ═══ */
+/* ═══ DATA LOADER ═══ */
 const skeletonsHtml = Array(8).fill('<div class="skel-item" aria-hidden="true"></div>').join('');
 
 function loadSection(sectionKey, gridId, tabsId, onReady) {
@@ -280,8 +281,14 @@ function loadSection(sectionKey, gridId, tabsId, onReady) {
   const grid = document.getElementById(gridId);
   if (grid) grid.innerHTML = skeletonsHtml;
 
-  Papa.parse(SHEET_BASE + sec.gid, {
-    download: true, header: true, skipEmptyLines: true,
+  // Generate a unique timestamp to bypass the browser cache
+  const cacheBuster = '&_cb=' + new Date().getTime();
+
+  // Append the cache buster to the end of the request URL
+  Papa.parse(SHEET_BASE + sec.gid + cacheBuster, {
+    download: true, 
+    header: true, 
+    skipEmptyLines: true,
     complete: r => {
       parseData(sectionKey, r.data);
       if (sec.hasCategories && tabsId) renderTabs(sectionKey, tabsId, gridId);
@@ -292,7 +299,6 @@ function loadSection(sectionKey, gridId, tabsId, onReady) {
     }
   });
 }
-
 function parseData(sectionKey, rows) {
   const sec = SECTIONS[sectionKey];
   const sd  = sectionData[sectionKey];
