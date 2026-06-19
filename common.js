@@ -246,7 +246,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Cats & Dogs",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%202.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%202.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/listing/4519620559",
     "ALT_TEXT": "A humorous, vintage-style bathroom art print featuring a fluffy long-haired cat with large brown eyes and brown, white, and black tabby patches. The cat is peeking into the frame from the right side. The background has a split design: a textured, distressed light pinkish-cream top half and a solid white bottom half. The top section features the words \"WELCOME TO THE LOO\" in a tall, condensed muted blue font. The bottom white section contains the text \"THE CAT WILL BE WITH YOU SHORTLY\" in a tall, condensed charcoal grey font.",
     "TAGS": "welcome to the loo, funny bathroom art, cat toilet sign, restroom humor print, guest wc wall decor, cute fluffy cat poster, humorous bathroom quotes, powder room wall art, cheeky cat illustration, vintage toilet decor",
@@ -279,7 +279,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Cats & Dogs",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/4518362387/funny-cat-art-print-for-above-toilet",
     "ALT_TEXT": "A humorous vintage-style illustration of a black and white long-haired cat wearing a leopard print headscarf, dark cat-eye sunglasses, and carrying a matching leopard print purse. The cat holds a smoking cigarette in one paw against a textured cream background. Curving text at the top reads \"Please close the lid\" and cursive text at the bottom reads \"the cat has a drinking problem!\".",
     "TAGS": "cat bathroom art, funny bathroom print, close the lid sign, toilet lid reminder, vintage cat art, leopard print decor, retro bathroom wall art, funny cat lover gift, toilet humor print, powder room decor, guest WC sign, black and white cat, cheeky bathroom art, sassy cat print, dressing room decor, quirky wall art, kitsch home decor, pastel retro aesthetic, framed cat print, toilet drinking problem, please close the lid cat sign, cat has a drinking problem print, vintage cat with sunglasses art, leopard print cat wall decor, humorous guest toilet art UK, close the lid sign, cat bathroom art, funny restroom print, drinking problem cat, retro bathroom decor, guest WC wall art, sassy cat print, leopard print cat, funny cat lover gift, vintage bathroom sign, powder room wall art, humorous toilet art, quirky home decor",
@@ -312,7 +312,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2023.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2023.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1879332612/girl-diver-art-print-retro-swimming-pool",
     "ALT_TEXT": "Vintage-style illustration of a woman in a white striped swimsuit and swim cap performing a graceful swan dive against a soft blue sky with hazy light bokeh.",
     "TAGS": "Diving Girl Art Print, Coastal Wall Decor, Vintage Beach Illustration, Retro Swimsuit Aesthetic, Swan Dive Art, Estelle Designs, Modern Beach House Decor.",
@@ -323,7 +323,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2028.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2028.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1881304722/woman-diving-art-print-retro-pool-house",
     "ALT_TEXT": "Vintage-style illustration of a person's legs sticking out of a pool during a splash, featuring turquoise water and a soft peach-colored sky.",
     "TAGS": "Pool House Decor, Funny Bathroom Art, Summer Splash Illustration, Retro Coastal Wall Art, Turquoise and Peach Decor, Estelle Designs, Whimsical Vacation Print.",
@@ -334,7 +334,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2026.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2026.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1895484177/poolside-art-print-woman-sunbathing",
     "ALT_TEXT": "Vintage-style illustration of a woman in a white bikini and large sun hat lounging by a swimming pool with a drink, featuring soft pastel tones.",
     "TAGS": "Poolside Wall Art, Chic Summer Illustration, Vintage Beach Decor, Sun Hat Art Print, Retro Vacation Aesthetic, Estelle Designs, Modern Coastal Decor.",
@@ -345,7 +345,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2025.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2025.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1881298488/woman-sunbathing-art-print-retro",
     "ALT_TEXT": "Vintage-style illustration of a woman in a white bikini and straw hat lying flat along the edge of a turquoise pool, one arm reaching into the water, against a soft peach background.",
     "TAGS": "Minimalist Beach Art, Poolside Wall Decor, Chic Summer Illustration, White Bikini Art Print, Coastal Relaxation Decor, Estelle Designs, Modern Retro Art.",
@@ -356,7 +356,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2015.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1781376699128",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2015.jpg?tr=w-1300&updatedAt=1781376699128",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1881249560/poolside-woman-art-print-retro-summer",
     "ALT_TEXT": "Vintage-style illustration of a woman in a white bikini and white sunglasses lounging on a pink float in a turquoise swimming pool under a soft peach sky.",
     "TAGS": "Pool Float Art Print, Chic Summer Wall Decor, Pink and Blue Coastal Art, Retro Sunglasses Illustration, Beach House Fashion Art, Estelle Designs, Modern Poolside Decor.",
@@ -367,7 +367,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2022.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394548885",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2022.jpg?tr=w-1300&updatedAt=1777394548885",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1880343866/retro-woman-on-pool-float-art-print-pool",
     "ALT_TEXT": "Vintage-style aerial illustration of a woman in a white bikini and white-rimmed sunglasses floating on a pink raft in blue water with sun reflections.",
     "TAGS": "Aerial Pool Art, Coastal Wall Decor, Pink Raft Illustration, Retro Summer Aesthetic, High-Fashion Beach Art, Estelle Designs, Modern Luxury Print.",
@@ -378,7 +378,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%207.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394548574",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%207.jpg?tr=w-1300&updatedAt=1777394548574",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1895539987/retro-woman-swimming-pool-art-print",
     "ALT_TEXT": "Vintage-style illustration of a woman in a white high-waisted bikini and white-rimmed sunglasses floating in a blue pool with sun-dappled water and a soft shadow below.",
     "TAGS": "Pool Art Print, Minimalist Coastal Decor, White Bikini Art, Retro Summer Illustration, Floating Girl Wall Art, Estelle Designs, Modern Beach House Decor.",
@@ -389,7 +389,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2017.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1781855439427",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2017.jpg?tr=w-1300&updatedAt=1781855439427",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1879321636/retro-girl-diver-art-print-woman-on-dive",
     "ALT_TEXT": "Vintage-style illustration of a woman in a white striped swimsuit and cap standing poised on a diving board against a soft, warm neutral background.",
     "TAGS": "Diving Art Print, Vintage Coastal Wall Decor, Retro Swimsuit Illustration, Mid-Century Modern Beach Art, Estelle Designs, Minimalist Summer Print.",
@@ -400,7 +400,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%204.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394544658",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%204.jpg?tr=w-1300&updatedAt=1777394544658",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1892906761/retro-swimming-pool-art-print-boy-on",
     "ALT_TEXT": "Vintage-style aerial illustration of a woman in a striped swimsuit on a pink and white inner tube, floating in a pool with light blue stripes on the bottom.",
     "TAGS": "Aerial Pool Art, Coastal Graphic Decor, Striped Water Print, Vintage Summer Illustration, Pink and Blue Wall Art, Estelle Designs, Modern Beach House Decor.",
@@ -411,7 +411,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%206.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394545229",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%206.jpg?tr=w-1300&updatedAt=1777394545229",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1877948524/girl-jumping-pool-art-print-retro-summer",
     "ALT_TEXT": "Vintage-style illustration of a young girl in a blue and white striped swimsuit and blue goggles jumping into a pool under a soft peach-colored sky.",
     "TAGS": "Kids Pool Decor, Summer Art Print, Girl Jumping Illustration, Coastal Nursery Wall Art, Vintage Summer Decor, Estelle Designs, Playroom Wall Art.",
@@ -422,7 +422,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2021.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394538568",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2021.jpg?tr=w-1300&updatedAt=1777394538568",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1893516017/dive-board-art-print-retro-summer",
     "ALT_TEXT": "Vintage-style illustration of a woman with blonde hair in a white striped swimsuit mid-air after jumping from a high diving board against a soft blue sky.",
     "TAGS": "High Dive Art Print, Coastal Wall Decor, Vintage Beach Illustration, Retro Swimsuit Aesthetic, Summer Adventure Art, Estelle Designs, Modern Beach House Decor.",
@@ -444,7 +444,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2016.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2016.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1892136785/boy-and-golden-retriever-jumping-in-pool",
     "ALT_TEXT": "Vintage-style illustration of a young boy in striped trunks and a Golden Retriever jumping into a turquoise pool under a soft peach-colored sky.",
     "TAGS": "Golden Retriever Art Print, Boy and Dog Wall Art, Kids Pool Decor, Summer Joy Illustration, Coastal Nursery Decor, Estelle Designs, Dog Lover Gift.",
@@ -455,7 +455,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2011.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394549020",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2011.jpg?tr=w-1300&updatedAt=1777394549020",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1447498199/underwater-swimming-pool-art-print-retro",
     "ALT_TEXT": "Vintage-style underwater illustration of a person plunging into teal water with a large white splash and bubbles.",
     "TAGS": "Underwater Art Print, Coastal Wall Decor, Teal Beach Illustration, Splash Art Print, Modern Beach House Decor, Estelle Designs, Summer Vacation Aesthetic.",
@@ -466,7 +466,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%205.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394548798",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%205.jpg?tr=w-1300&updatedAt=1777394548798",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1714539757/swimming-pool-art-print-retro-underwater",
     "ALT_TEXT": "Vintage-style point-of-view illustration of a person's legs dangling into clear turquoise swimming pool water with sun-dappled reflections and a tiled edge.",
     "TAGS": "Poolside POV Art, Tropical Water Print, Beach House Wall Decor, Summer Vacation Illustration, Turquoise Bathroom Art, Estelle Designs, Modern Retro Coastal Print.",
@@ -477,7 +477,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2018.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2018.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1881295606/retro-pool-art-print-woman-with-sun",
     "ALT_TEXT": "Vintage-style illustration of a woman in a white bikini standing behind a leopard-print fringed umbrella at the edge of a blue pool under a peach sky.",
     "TAGS": "Leopard Print Wall Art, Chic Summer Illustration, Vintage Poolside Decor, Fringed Umbrella Art, Retro Beach Aesthetic, Estelle Designs, Modern Coastal Fashion Print.",
@@ -488,7 +488,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2031.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394536415",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2031.jpg?tr=w-1300&updatedAt=1777394536415",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1727990687/sunset-dive-art-print-vintage-swimming",
     "ALT_TEXT": "Vintage-style illustration of a young boy in striped trunks jumping from a high diving board into a hazy, warm peach-colored sky.",
     "TAGS": "Kids Diving Art Print, Retro Summer Wall Decor, Boy Jumping Illustration, Coastal Playroom Art, Vintage Beach House Decor, Estelle Designs, High Board Diving Print.",
@@ -499,7 +499,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2027.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394547431",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2027.jpg?tr=w-1300&updatedAt=1777394547431",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1711878345/aerial-swimming-pool-art-print-retro",
     "ALT_TEXT": "Vintage-style point-of-view illustration of legs dangling from an orange inner tube into clear turquoise pool water with sun-dappled reflections.",
     "TAGS": "Pool POV Art, Orange and Blue Decor, Coastal Wall Art, Summer Float Illustration, Minimalist Beach House Print, Estelle Designs, Modern Retro Water Art.",
@@ -510,7 +510,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2020.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394543999",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2020.jpg?tr=w-1300&updatedAt=1777394543999",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1877952356/girl-jumping-into-pool-art-print-retro",
     "ALT_TEXT": "Vintage-style illustration of a young girl in a white cherry-print swimsuit and pink goggles jumping into a turquoise pool with a pink inner tube under a peach sky.",
     "TAGS": "Kids Pool Art, Cherry Swimsuit Print, Pink Nursery Decor, Retro Summer Illustration, Girl Jumping into Pool Art, Estelle Designs, Playroom Wall Decor.",
@@ -521,7 +521,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2034.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394548952",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2034.jpg?tr=w-1300&updatedAt=1777394548952",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1782797241/retro-pool-art-print-woman-on-pink-float",
     "ALT_TEXT": "Vintage-style illustration of a woman's legs extended over a large pink inner tube in a turquoise pool with sun-dappled water.",
     "TAGS": "Pink Pool Art, Coastal Minimalist Decor, Summer Float Illustration, Retro Beach House Print, Pastel Wall Art, Estelle Designs, Modern Luxury Coastal Decor.",
@@ -532,7 +532,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2010.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394547750",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2010.jpg?tr=w-1300&updatedAt=1777394547750",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/4325309556/retro-swimming-pool-art-print-little-boy",
     "ALT_TEXT": "Vintage-style underwater illustration of a young boy in coral trunks holding his nose and plunging into turquoise water with lots of white bubbles.",
     "TAGS": "Underwater Kids Art, Boy Swimming Print, Turquoise Bathroom Decor, Summer Splash Illustration, Coastal Nursery Wall Art, Estelle Designs, Retro Pool Decor.",
@@ -543,7 +543,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%208.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394545962",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%208.jpg?tr=w-1300&updatedAt=1777394545962",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/4324199879/kids-pool-art-print-vintage-summer-wall",
     "ALT_TEXT": "Vintage-style illustration of three children seen from behind—a toddler in orange water wings, a girl in a red bikini, and a boy in yellow trunks—jumping into a turquoise pool under a peach sky.",
     "TAGS": "Sibling Wall Art, Kids Pool Decor, Summer Joy Illustration, Coastal Playroom Art, Vintage Beach House Decor, Estelle Designs, Children Jumping in Pool Print.",
@@ -554,7 +554,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2014.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1781376453907",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2014.jpg?tr=w-1300&updatedAt=1781376453907",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1880039466/underwater-girl-art-print-retro-swimming",
     "ALT_TEXT": "Vintage-style underwater illustration of a young girl in a yellow swimsuit holding her nose and plunging into turquoise water with an explosion of white bubbles.",
     "TAGS": "Underwater Kids Art, Girl Swimming Print, Yellow Swimsuit Illustration, Turquoise Bathroom Decor, Summer Splash Wall Art, Estelle Designs, Retro Pool Decor.",
@@ -576,7 +576,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%209.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1777394548686",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%209.jpg?tr=w-1300&updatedAt=1777394548686",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/4345397105/retro-girl-swimming-pool-art-print",
     "ALT_TEXT": "Vintage-style illustration of a woman swimming just beneath the surface of clear turquoise water with white bubbles and sun-dappled reflections.",
     "TAGS": "Underwater Swimming Art, Coastal Wall Decor, Vintage Beach Illustration, Retro Pool House Print, Turquoise Bathroom Art, Estelle Designs, Modern Coastal Living.",
@@ -1082,7 +1082,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Sports & Gym",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2016.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1781183126872",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2016.jpg?tr=w-1300&updatedAt=1781183126872",
     "ETSY_LINK": "https://estellestephens.etsy.com/listing/4520173927",
     "ALT_TEXT": "An art print featuring a repeating pattern of stylized tennis balls in retro pastel colors including soft pink, light yellow, and baby blue over a muted green background. The tennis balls have a slightly distressed, vintage texture. Several balls feature pink typography with tennis-related terms like MATCH POINT, LOVE ALL, STAY FOCUSED, ADVANTAGE, PLAY ON, DEUCE, QUIET PLEASE, and FOCUS.",
     "TAGS": "pastel-tennis-art, retro-sports-print, vintage-wall-decor, tennis-ball-pattern, cute-aesthetic-poster, girly-preppy-room-decor, tennis-lover-gift, pastel-pink-and-blue, distressed-texture-art, unique-sports-illustration",
@@ -1093,7 +1093,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Sports & Gym",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2013.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2013.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/listing/4518816540",
     "ALT_TEXT": "A vintage-style graphic illustration of the front half of a classic road bicycle. The frame is a muted teal green with terracotta orange accents on the headset and lugs, featuring a yellow brake lever and dropped handlebars. The large front wheel has detailed spokes and a brown-rimmed tire, set against a textured, distressed light cream background. The cursive text \"Pedal Power\" is written in dark charcoal grey just above the tire.",
     "TAGS": "vintage bicycle art, retro cycling print, pedal power poster, cyclist gift idea, bike enthusiast art, minimalist wall decor, road bike illustration, mid century modern, garage wall art, cycling club quote, classic bike poster, unique bike gifts, sports wall print, pedal power wall decor, vintage bike illustration, retro road bike poster, cycling gifts for men, cycling gifts for women, commuter bike art, bicycle hub wall art",
@@ -1104,7 +1104,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Sports & Gym",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2014.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2014.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/listing/4518869945",
     "ALT_TEXT": "A vintage-style graphic illustration of two bright red cherries designed to look like heavy Olympic barbell weight plates. The left plate features the text \"CHERRY-PICK\" curved along the top edge, and the right plate reads \"YOUR GAINS\" along the bottom, with \"45 LBS\" printed near the center ring. The plates connect to light green stems and a large leaf, all set against a textured, light cream background with distressed, scratched border edges.",
     "TAGS": "cherry gym art, funny lifting print, cherry pick your gains, retro gym decor, cute workout poster, fitness wall art, weightlifting gifts, home gym sign, pastel fitness print, unique barbell art, aesthetic gym poster, women who lift, quirky exercise decor",
@@ -1115,7 +1115,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Sports & Gym",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2017.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1781298185957",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2017.jpg?tr=w-1300&updatedAt=1781298185957",
     "ETSY_LINK": "https://estellestephens.etsy.com/listing/4520992760",
     "ALT_TEXT": "Minimalist retro tennis art print featuring a textured cream background and an abstract white tennis ball line with the word LOVE in a vintage orange font.",
     "TAGS": "minimalist-tennis-art, retro-sports-print, pastel-vintage-decor, abstract-tennis-line, love-tennis-poster",
@@ -1126,7 +1126,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Sports & Gym",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2018.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300&updatedAt=1781353184490",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2018.jpg?tr=w-1300&updatedAt=1781353184490",
     "ETSY_LINK": "https://estellestephens.etsy.com/listing/4521258003",
     "ALT_TEXT": "Minimalist golf art print featuring a vintage sage green and cream striped background with a central golf ball illustration containing the witty phrase PAR-TEE animal.",
     "TAGS": "funny-golf-print, par-tee-animal, minimalist-sports-art, retro-golf-decor, pastel-striped-poster",
@@ -1137,7 +1137,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Sports & Gym",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2019.jpg?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300?tr=w-1300",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2019.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/listing/4521337774",
     "ALT_TEXT": "Minimalist vintage sports art print featuring the word ROWING stacked vertically in a retro pink font with small hearts, flanked by symmetric rows of stylized wooden boat oars on a textured off-white background.",
     "TAGS": "vintage-rowing-print, retro-crew-poster, pastel-sports-art, minimalist-oars-decor, cute-rower-gift",
