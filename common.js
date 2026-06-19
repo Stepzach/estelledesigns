@@ -3,12 +3,95 @@
    ─────────────────────────────────────────
    • Nav / burger / drawer
    • Scroll reveal
-   • Section data loading (PapaParse)
+   • Section data loading (PapaParse & Local)
    • Gallery renderer
    • Item overlay (slide-up, preserves scroll)
    • Meta injection
    • Shimmer skeleton helpers
 ═══════════════════════════════════════════ */
+
+/* ── Hardcoded Art Prints Data ── */
+const PRINTS_DATA = [
+  {
+    CATEGORY: "Fashion",
+    IMAGE: "https://ik.imagekit.io/ngoo36zmk/IMG_7529.jpeg?updatedAt=1777801530867",
+    ETSY_LINK: "https://estellestephens.etsy.com/uk/listing/1879817261/red-lace-lingerie-art-print-trendy",
+    ALT_TEXT: "A beautiful and delicate illustration of a matching red lace lingerie set, including an intricate underwire bra and a matching thong. The set features fine embroidery and scalloped edges. In the center, the words 'J’adore' are written in an elegant red cursive script with a small heart, against a soft cream background.",
+    TAGS: "Red Lingerie Art, Lace Bra Illustration, Parisian Chic Wall Decor, J'adore Print, Romantic Bedroom Art, Estelle Designs, Bridal Shower Gift, French Style Poster.",
+    TITLE: "\"Jadore\" Red Lace Lingerie Art | Chic Parisian Bedroom Decor",
+    PIN_DESC: "Romance is in the air! The \"J'adore\" print by Estelle Designs is a chic and delicate tribute to French elegance. Featuring an intricate red lace lingerie set, this illustration is the perfect addition to a stylish dressing room or a romantic bedroom gallery wall. A stunning gift for the lover of all things chic. Shop our high-quality Giclée prints and digital downloads today!",
+    BEST_SELLER: "",
+    SHORT: "yes"
+  },
+  {
+    CATEGORY: "Fashion",
+    IMAGE: "https://ik.imagekit.io/ngoo36zmk/IMG_7543.jpeg?updatedAt=1777801530556",
+    ETSY_LINK: "https://estellestephens.etsy.com/uk/listing/1880879497/pink-leather-jacket-art-print-rock-chick",
+    ALT_TEXT: "A stylish illustration of the back of a light pink leather moto jacket. The jacket features silver studs along the collar, shoulders, and sleeves, with silver zippers on the cuffs. The words 'ROCK CHICK' are written across the upper back in bold, red-burgundy block letters against a soft cream background.",
+    TAGS: "Rock Chick Art, Pink Leather Jacket Print, Studded Moto Jacket Decor, Edgy Feminine Wall Art, Estelle Designs, Fashion Illustration, Teen Room Decor, Cool Girl Aesthetic.",
+    TITLE: "Rock Chick\" Pink Studded Jacket Art | Edgy Fashion Decor",
+    PIN_DESC: "Soft pink meets heavy metal! The \"Rock Chick\" print by Estelle Designs is the ultimate edgy-chic addition to your space. Featuring a studded pink leather jacket with bold lettering, it’s the perfect piece for a stylish bedroom or a music-inspired gallery wall. A must-have gift for the rebel at heart! Shop our high-quality Giclée prints and digital downloads today.",
+    BEST_SELLER: "",
+    SHORT: ""
+  },
+  {
+    CATEGORY: "Fashion",
+    IMAGE: "https://ik.imagekit.io/ngoo36zmk/IMG_7538.jpeg?updatedAt=1777801530357",
+    ETSY_LINK: "https://estellestephens.etsy.com/uk/listing/1867171592/pink-cowgirl-boots-art-print-girly",
+    ALT_TEXT: "A vertical illustration of a pair of pink cowboy boots arranged in a mirrored layout. The boots feature intricate white celestial designs including a crescent moon, stars, and sunburst patterns, along with delicate botanical accents. The boots have dark heels and are set against a soft, textured pale pink background.",
+    TAGS: "Celestial Cowboy Boots, Pink Western Art, Boho Cowgirl Decor, Moon and Stars Illustration, Estelle Designs, Pink Aesthetic Wall Art, Coastal Cowgirl Poster, Mystical Western Print.",
+    TITLE: "Pink Celestial Cowboy Boots Art | Boho Western Aesthetic Decor",
+    PIN_DESC: "For the cowgirl with her head in the stars! ✨ The \"Cosmic Cowgirl\" print by Estelle Designs features dreamy pink western boots with intricate celestial details. Perfect for adding a whimsical, boho-western touch to your bedroom or apartment. A must-have for the pink-obsessed dreamer! Shop our high-quality Giclée prints and digital downloads today.",
+    BEST_SELLER: "",
+    SHORT: ""
+  },
+  {
+    CATEGORY: "Fashion",
+    IMAGE: "https://ik.imagekit.io/ngoo36zmk/IMG_7534.jpeg?updatedAt=1777801529977",
+    ETSY_LINK: "https://estellestephens.etsy.com/uk/listing/1852132223/dramatic-exit-art-print-funny-hallway",
+    ALT_TEXT: "A stylish fashion illustration featuring a woman with dark hair and long black opera gloves peeking out from behind a tall dusty rose curtain. The words 'DRAMATIC EXIT' are centered on the curtain in bold black and white block lettering. The background is a textured cream color.",
+    TAGS: "Dramatic Exit Art, Fashion Illustration, Opera Gloves Print, Dusty Rose Wall Decor, Hollywood Glamour Poster, Estelle Designs, Sassy Statement Art, Vanity Room Decor.",
+    TITLE: "\"Dramatic Exit\" Fashion Art Print | Chic Pink & Black Decor",
+    PIN_DESC: "Always leave them wanting more! 🎭✨ The \"Dramatic Exit\" print by Estelle Designs is the ultimate tribute to high-fashion flair and cinematic style. Featuring elegant opera gloves and bold typography, it’s the perfect addition to a stylish dressing room or a chic apartment gallery wall. Shop our high-quality Giclée prints and digital downloads today!",
+    BEST_SELLER: "",
+    SHORT: ""
+  },
+  {
+    CATEGORY: "Cats & Dogs",
+    IMAGE: "https://ik.imagekit.io/ngoo36zmk/IMG_7541.jpeg?updatedAt=1777801529304",
+    ETSY_LINK: "https://estellestephens.etsy.com/uk/listing/1880513407/homebody-black-cat-art-print-introvert",
+    ALT_TEXT: "A stylish illustration of a woman with long brown hair lying down and peeking out from behind a stretched-out black cat with yellow eyes. The scene is set against a soft, textured cream background. The words 'it's too peopley outside' are written in a playful pink cursive script at the top.",
+    TAGS: "Introvert Art Print, Black Cat Wall Decor, Too Peopley Outside Poster, Funny Cat Mom Gift, Estelle Designs, Homebody Illustration, Sassy Wall Art, Minimalist Living Room Decor.",
+    TITLE: "\"It's Too Peopley Outside\" Art Print | Funny Black Cat & Introvert Decor",
+    PIN_DESC: "Current mood: staying in! 🐈‍⬛✨ The \"Too Peopley\" print by Estelle Designs is the ultimate anthem for introverts and cat lovers everywhere. Featuring a chic illustration and a relatable quote, it’s the perfect addition to your cozy home sanctuary. A must-have gift for the cat mom in your life! Shop our high-quality Giclée prints and digital downloads today.",
+    BEST_SELLER: "yes",
+    SHORT: ""
+  },
+  {
+    CATEGORY: "Pool",
+    IMAGE: "https://ik.imagekit.io/ngoo36zmk/IMG_7447.jpeg",
+    ETSY_LINK: "https://estellestephens.etsy.com/uk/listing/1894181969/retro-pool-art-print-woman-with-striped",
+    ALT_TEXT: "Vintage-style illustration of a woman from behind, wrapped in a blue and white striped towel with the word HOLIDAY written in pink across it, soft pastel background.",
+    TAGS: "Coastal Chic Wall Art, Holiday Typography Print, Striped Beach Towel Decor, Vintage Summer Illustration, Travel Aesthetic Art, Estelle Designs, Modern Beach House Decor.",
+    TITLE: "Vintage Holiday Beach Art | Coastal Chic Striped Towel Print",
+    PIN_DESC: "Dive into summer with this retro-aesthetic pool art collection by Estelle Designs. Featuring vintage poolside vibes and French Riviera-inspired pastel colors, these high-quality Giclée prints are the perfect holiday home decor for your summer house or pool house. From underwater swimming art to classic retro posters, bring the ultimate vacation feel to your walls. Available as instant digital downloads or premium art prints.",
+    BEST_SELLER: "yes",
+    SHORT: ""
+  }
+  /* * ADD REMAINING ITEMS HERE FOLLOWING THE EXACT SAME STRUCTURE 
+   * {
+   * CATEGORY: "...",
+   * IMAGE: "...",
+   * ETSY_LINK: "...",
+   * ALT_TEXT: "...",
+   * TAGS: "...",
+   * TITLE: "...",
+   * PIN_DESC: "...",
+   * BEST_SELLER: "",
+   * SHORT: ""
+   * }
+   */
+];
 
 /* ── Config ── */
 const SHEET_BASE = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSqEPfwqk0ju0h0kXT7IWt9iUoykb6PhJgCPTDNWnmC3zuPTMYbjhG7fzV6dNBs7LZzNeTtysfopkAv/pub?output=csv&gid=';
@@ -217,7 +300,6 @@ document.addEventListener('keydown', e => {
 });
 
 /* ═══ ITEM DETAIL RENDERER ═══ */
-/* ═══ ITEM DETAIL RENDERER ═══ */
 function renderItemPage(sectionKey, row, slug) {
   if (!itemContent) return;
   const imgUrl     = getImage(row);
@@ -272,7 +354,7 @@ function renderItemPage(sectionKey, row, slug) {
   `;
   if (window.PinUtils) window.PinUtils.build();
 }
-/* ═══ DATA LOADER ═══ */
+
 /* ═══ DATA LOADER ═══ */
 const skeletonsHtml = Array(8).fill('<div class="skel-item" aria-hidden="true"></div>').join('');
 
@@ -281,7 +363,18 @@ function loadSection(sectionKey, gridId, tabsId, onReady) {
   const grid = document.getElementById(gridId);
   if (grid) grid.innerHTML = skeletonsHtml;
 
-  // Generate a unique timestamp to bypass the browser cache
+  // Render static data if looking at the prints section
+  if (sectionKey === 'prints') {
+    // Small timeout to mimic async flow and let the DOM settle
+    setTimeout(() => {
+      parseData(sectionKey, PRINTS_DATA);
+      if (sec.hasCategories && tabsId) renderTabs(sectionKey, tabsId, gridId);
+      if (onReady) onReady();
+    }, 50);
+    return;
+  }
+
+  // Generate a unique timestamp to bypass the browser cache for other sections
   const cacheBuster = '&_cb=' + new Date().getTime();
 
   // Append the cache buster to the end of the request URL
@@ -299,6 +392,7 @@ function loadSection(sectionKey, gridId, tabsId, onReady) {
     }
   });
 }
+
 function parseData(sectionKey, rows) {
   const sec = SECTIONS[sectionKey];
   const sd  = sectionData[sectionKey];
@@ -367,7 +461,6 @@ function switchTab(sectionKey, cs, tabsId, gridId) {
   buildGallery(sectionKey, sd.categoryMap[cs]?.rows || [], gridId);
 }
 
-/* Build gallery grid */
 /* Build gallery grid */
 function buildGallery(sectionKey, rows, gridId) {
   const grid = document.getElementById(gridId);
