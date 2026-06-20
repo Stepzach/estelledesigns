@@ -356,7 +356,7 @@ const PRINTS_DATA = [
   },
   {
     "CATEGORY": "Pool",
-    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2015.jpg?tr=w-1300&updatedAt=1781376699128",
+    "IMAGE": "https://ik.imagekit.io/ngoo36zmk/4_To_5_RATIO%2015__X0pa1UQO.jpg?tr=w-1300",
     "ETSY_LINK": "https://estellestephens.etsy.com/uk/listing/1881249560/poolside-woman-art-print-retro-summer",
     "ALT_TEXT": "Vintage-style illustration of a woman in a white bikini and white sunglasses lounging on a pink float in a turquoise swimming pool under a soft peach sky.",
     "TAGS": "Pool Float Art Print, Chic Summer Wall Decor, Pink and Blue Coastal Art, Retro Sunglasses Illustration, Beach House Fashion Art, Estelle Designs, Modern Poolside Decor.",
